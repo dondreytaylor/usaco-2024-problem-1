@@ -1,10 +1,10 @@
 # USACO 2024 February Bronze - Problem 1: Palindrome Game
 
-This repository contains a JavaScript solution for the USACO Bronze problem **Palindrome Game**.
+This repository contains a Python solution for the USACO Bronze problem **Palindrome Game**.
 
 It includes:
 
-- `solution.js` - a runnable Node.js solution
+- `solution.py` - a runnable Python solution
 - a step-by-step explanation of the idea
 - GitHub setup instructions
 
@@ -133,7 +133,7 @@ So:
 
 The problem says `S` can be extremely large, even up to `10^(10^5)` in size.
 
-That means `S` does **not** fit in normal JavaScript numbers.
+That means `S` does **not** fit in normal fixed-width integer types.
 
 But we do not need the whole number.
 
@@ -141,8 +141,8 @@ We only care about its **last digit**.
 
 So we can read `S` as a string and check:
 
-```js
-S[S.length - 1]
+```py
+S[-1]
 ```
 
 If that last character is `'0'`, answer `E`. Otherwise answer `B`.
@@ -209,20 +209,20 @@ So the processing work after input is constant time per test case.
 
 ---
 
-## JavaScript solution
+## Python solution
 
-See `solution.js` for the full implementation with detailed comments.
+See `solution.py` for the full implementation.
 
 ---
 
 ## How to run
 
-Make sure you have Node.js installed.
+Make sure you have Python 3 installed.
 
 Run:
 
 ```bash
-node solution.js < input.txt
+python3 solution.py < input.txt
 ```
 
 ---
@@ -255,7 +255,7 @@ Your folder should look like this:
 ```text
 usaco-palindrome-game/
   README.md
-  solution.js
+  solution.py
 ```
 
 ### 2. Initialize git
@@ -267,7 +267,7 @@ git init
 ### 3. Add the files
 
 ```bash
-git add README.md solution.js
+git add README.md solution.py
 ```
 
 ### 4. Commit them
